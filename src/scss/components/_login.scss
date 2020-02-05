@@ -1,0 +1,31 @@
+@import '../variables';
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    grid-row: row-start/row-end;
+    grid-column: 1/column-3;
+}
+
+.login-input-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: .5rem;
+}
+
+.login-button {
+    background-color: $complementary-color;
+    width: 40%;
+    height: 3rem;
+    align-self: center;
+    margin: 1rem 0 2rem;
+    border-radius: 1rem;
+    font-size: inherit;
+}
+
+.login-label {
+    margin-left: 1rem
+}

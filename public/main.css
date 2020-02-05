@@ -1,0 +1,171 @@
+.primary-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  grid-row: row-start/row-end;
+  grid-column: 1/column-3;
+}
+
+.team-box-container {
+  margin: 1rem auto;
+  width: 80%;
+  height: 5rem;
+  display: grid;
+  position: relative;
+  color: white;
+  grid-template-rows: 50% [row-1];
+  grid-template-columns: 40% [column-1] 20% [column-2] 40% [column-3];
+}
+
+.team-seperator {
+  width: 20%;
+  height: 100%;
+}
+
+.individual-teams-container, .individual-teams-container-team-2, .individual-teams-container-team-1 {
+  width: 40%;
+  height: 100%;
+  color: inherit;
+  font-size: inherit;
+}
+.individual-teams-container:hover, .individual-teams-container-team-2:hover, .individual-teams-container-team-1:hover {
+  cursor: pointer;
+}
+.individual-teams-container-team-1 {
+  padding-left: 2rem;
+  display: flex;
+  grid-column: 1/column-1;
+  align-items: center;
+}
+.individual-teams-container-team-2 {
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  grid-column: column-2/column-3;
+  justify-content: right;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  grid-row: row-start/row-end;
+  grid-column: 1/column-3;
+}
+
+.login-input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.login-button {
+  background-color: #FFE082;
+  width: 40%;
+  height: 3rem;
+  align-self: center;
+  margin: 1rem 0 2rem;
+  border-radius: 1rem;
+  font-size: inherit;
+}
+
+.login-label {
+  margin-left: 1rem;
+}
+
+.primary-navbar {
+  color: white;
+  position: relative;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 100% [rowstart];
+  grid-template-columns: 20% [column-1] 10% [column-2] 10% [column-3] 20% [column-4] 40% [column-5];
+  grid-row-start: 1;
+  grid-row-end: row-start;
+  grid-column: 1/column-6;
+}
+
+.navbar-container, .navbar-container-login, .navbar-container-home, .navbar-container-title {
+  display: grid;
+  align-self: center;
+  justify-items: start;
+  padding: 1rem;
+}
+.navbar-container-title {
+  grid-column: 1/2;
+}
+.navbar-container-home {
+  grid-column: 2/3;
+}
+.navbar-container-login {
+  grid-column: 3/4;
+}
+
+.TextField.MuiFormLabel-root {
+  color: pink;
+}
+
+button {
+  background-color: initial;
+  border: initial;
+  color: initial;
+  font-size: initial;
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 10% [row-start] 90% [row-end];
+  grid-template-columns: 20% [column-1] 10% [column-2] 10% [column-3] 20% [column-4] 40% [column-5];
+  background-color: #121212;
+  font-size: 2vm;
+}
+
+.primary-overlay, .primary-overlay-team-2, .primary-overlay-team-2-selected, .primary-overlay-team-1, .primary-overlay-team-1-selected, .primary-overlay-navbar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.primary-overlay:hover, .primary-overlay-team-2:hover, .primary-overlay-team-2-selected:hover, .primary-overlay-team-1:hover, .primary-overlay-team-1-selected:hover, .primary-overlay-navbar:hover {
+  opacity: 16%;
+}
+.primary-overlay-navbar {
+  width: 100%;
+  opacity: 16%;
+  background-color: white;
+  z-index: -1;
+}
+.primary-overlay-team-1, .primary-overlay-team-1-selected {
+  width: 40%;
+  left: 0;
+  opacity: 8%;
+  border: 2px solid white;
+}
+.primary-overlay-team-1-selected {
+  background-color: white;
+  opacity: 16%;
+}
+.primary-overlay-team-2, .primary-overlay-team-2-selected {
+  width: 40%;
+  right: 0;
+  opacity: 8%;
+  border: 2px solid white;
+}
+.primary-overlay-team-2-selected {
+  background-color: white;
+  opacity: 16%;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,80 @@
+//  components
+@import "components/container";
+@import "components/login";
+@import "components/navbar";
+
+
+// overrides
+@import "overrides/textfield";
+
+@import 'variables';
+
+button {
+  background-color: initial;
+  border: initial;
+  color: initial;
+  font-size: initial;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 10% [row-start] 90% [row-end];
+  grid-template-columns: 20% [column-1] 10% [column-2] 10% [column-3] 20% [column-4] 40% [column-5];
+  background-color: $primary-surface-color;
+  font-size: 2vm;
+}
+
+.primary-overlay {
+  position:absolute;
+  top: 0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  &:hover {
+    opacity: 16%
+  }
+
+  &-navbar {
+    @extend .primary-overlay;
+    width:100%;
+    opacity: 16%;
+    background-color: white;
+    z-index: -1;
+  }
+
+  &-team-1 {
+    @extend .primary-overlay;
+    width: 40%;
+    left: 0;
+    opacity: 8%;
+    border: 2px solid white;
+    &-selected {
+      @extend .primary-overlay-team-1;
+      background-color: white;
+      opacity: 16%;
+    }
+  }
+
+  &-team-2 {
+    @extend .primary-overlay;
+    width: 40%;
+    right: 0;
+    opacity: 8%;
+    border: 2px solid white;
+    
+    &-selected {
+      @extend .primary-overlay-team-2;
+      background-color: white;
+      opacity: 16%;
+    }
+  }
+}

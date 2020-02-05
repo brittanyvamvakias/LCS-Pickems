@@ -1,0 +1,34 @@
+.primary-navbar {
+    color: white;
+    position: relative;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 100% [rowstart];
+    grid-template-columns: 20% [column-1] 10% [column-2] 10% [column-3] 20% [column-4] 40% [column-5];
+    grid-row-start: 1;
+    grid-row-end: row-start;
+    grid-column: 1/column-6;
+}
+
+
+.navbar-container {
+    display: grid;
+    align-self: center;
+    justify-items: start;
+    padding: 1rem;
+
+    &-title {
+        @extend .navbar-container;
+        grid-column: 1 / 2;
+    }
+
+    &-home {
+        @extend .navbar-container;
+        grid-column: 2 / 3;
+    }
+
+    &-login {
+        @extend .navbar-container;
+        grid-column: 3 / 4;
+    }
+}
